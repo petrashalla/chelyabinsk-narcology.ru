@@ -2528,6 +2528,11 @@ a.header__info_link:hover {
   text-decoration: underline;
   color: var(--osnovnoy);
 }
+.prices__table_cost {
+  width: 100%;
+  max-width: 200px;
+  text-align: right;
+}
 .prices__table_btn {
   font-weight: 500;
   text-decoration: underline;
@@ -2588,9 +2593,17 @@ a.header__info_link:hover {
   .prices__table_item {
     padding: 16px;
   }
+  .prices__table_cost {
+    max-width: 150px;
+  }
   .prices__content {
     padding-bottom: 20px;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 460px) {
+  .prices__table_cost {
+    max-width: 110px;
   }
 }
 .appeal__wrap {
@@ -5607,7 +5620,7 @@ a.header__info_link:hover {
 .site-map__accordion, .site-map__content {
   display: contents;
 }
-.site-map__title {
+.site-map__title, .site-map__link {
   display: block;
   font-weight: 700;
   font-size: 36px;
@@ -5618,8 +5631,11 @@ a.header__info_link:hover {
   margin-bottom: 24px;
   transition: all 0.2s ease-in;
 }
-.site-map__title:hover {
+.site-map__title:hover, .site-map__link:hover {
   color: var(--akcent);
+}
+.site-map__link {
+  font-size: 24px;
 }
 .site-map__list {
   list-style: none;
@@ -5669,7 +5685,7 @@ a.header__info_link:hover {
   .site-map__accordion, .site-map__content {
     display: block;
   }
-  .site-map__item {
+  .site-map__item:not(:last-child) {
     border-bottom: 1px solid rgba(60, 50, 50, 0.1);
   }
   .site-map__accordion {
@@ -5691,10 +5707,15 @@ a.header__info_link:hover {
   .site-map__accordion.accordion--active::after {
     transform: rotate(225deg);
   }
-  .site-map__title {
+  .site-map__title, .site-map__link {
     font-size: 20px;
     margin-bottom: 0;
     padding-bottom: 16px;
+  }
+  .site-map__link {
+    width: 100%;
+    border-bottom: 1px solid rgba(60, 50, 50, 0.1);
+    margin-bottom: 16px;
   }
   .site-map__list {
     list-style: none;
